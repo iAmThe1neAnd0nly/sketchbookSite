@@ -106,8 +106,13 @@ section p {
 }
 
 #container img{
-    width: 10em;
+    width: 30em;
+    margin: 5px;
     height: auto;
+    min-width: 0;
+    min-height: 0;
+    align-self: flex-start;
+    border: 6px solid;
 }
 
 iframe {
@@ -134,14 +139,27 @@ iframe {
         flex-direction: column;
     }
 
+    #titlebar h1{
+        font-size: 5em;
+    }
+    #titlebar h2{
+        font-size: 3em;
+    }
+
     img{
         max-width: 45%;
     }
 
+    #container img {
+        min-width: 95%;
+        border: 3px solid;
+        margin: 0 auto;
+    }
+
     .square-btn{
-        font-size: 1em;
-        width: 7em;
-        height: 7em;
+        font-size: 0.7em;
+        width: 6.5em;
+        height: 6.5em;
     }
 
     .section-header{
@@ -150,5 +168,13 @@ iframe {
 
     .section-header h2{
         font-size: 3em;
+    }
+
+    section{
+        overflow-x: visible;
+    }
+
+    p{
+        font-size: 10px;
     }
  }
