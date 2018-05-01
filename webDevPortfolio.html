@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript"></script>
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+        <meta name="viewport" content="width=device-width" />
+    </head>
+    <title>Web Dev Portfolio</title>
+    <body>
+        <div id="project-select">
+            <button onclick="setProject('audio')">Audio Visualizer
+                <p>An Audio Visualizer made with the Canvas and Web Audio API</p>
+            </button>
+            <button onclick="setProject('spotify')">Spotify Playlist Generator
+                <p>Generates a Spotify playlist based on the search criteria</p>
+            </button>
+        </div>
+        <iframe id="projPreview" src=""></iframe>
+
+        <script>
+
+            let preview = document.getElementById('projPreview');
+            function setProject(projName){
+                // add loading circle
+                if(projName === 'audio') preview.src = "http://audiovisualizer357.herokuapp.com";
+                if(projName === 'spotify') preview.src = "http://vast-island-96900.herokuapp.com"
+            }
+
+        </script>
+    </body>
+</html>
