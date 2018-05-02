@@ -21,7 +21,7 @@ $(document).ready(function () {
         success: function (data) {
             $(data).find("a:contains(" + fileextension + ")").each(function () {
                 var filename = this.href.replace(window.location.host, "").replace("http:///", "");
-                $("#container").append($("<img src= " + dir + filename + " width='30px' height='auto'></img>"));
+                $("#container").append($("<img src= /" + dir + filename + " width='30px' height='auto'></img>"));
             });
         }
     });
